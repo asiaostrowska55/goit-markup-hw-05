@@ -20,7 +20,23 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.link.active {
+  color: #2196f3;
+}
+.active::after {
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  transform: translateY(33px);
+}
+.position {
+  position: relative;
+}
 .webstudio2 {
   font-family: "Raleway";
   font-weight: 700;
@@ -105,7 +121,9 @@ body {
   text-align: center;
 }
 .btn-studio:hover {
-  box-shadow: 1px 0px 2px 3px #747474;
+  box-shadow: 1px 0px 10px 3px rgba(73, 76, 105, 0.693);
+  transition-duration: 250ms;
+  transform: scale(1.05);
 }
 .portfolio-titles {
   font-weight: 700;
@@ -209,6 +227,7 @@ body {
 }
 .header {
   border-bottom: 1px solid #ececec;
+  height: 100%;
 }
 .header-items {
   display: flex;
@@ -467,14 +486,17 @@ img {
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
+  text-align: center;
 }
 
 .whatwedo-label > .label {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   right: 0;
   left: 0;
+  bottom: 0;
   margin: 0;
-  padding: 27px 90px;
+  padding-top: 27px;
+  padding-bottom: 27px;
   background-color: rgba(47, 48, 58, 0.8);
 }
