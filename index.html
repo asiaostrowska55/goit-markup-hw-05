@@ -71,7 +71,9 @@
           DLA WASZEGO BIZNESU
         </h1>
         <p class="title-button">
-          <button type="button" class="btn-studio">Zamów usługe</button>
+          <button type="button" class="btn-studio" data-modal-open>
+            Zamów usługe
+          </button>
         </p>
       </div>
 
@@ -544,7 +546,23 @@
         </div>
       </div>
     </footer>
-    <!-- 
-    <script src="./js/modal.js"></script> -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn">
+          <svg class="close">
+            <use
+              href="./images/close.svg"
+              width="30"
+              height="30"
+              x="11"
+              y="11"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
