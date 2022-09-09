@@ -534,21 +534,24 @@ img {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.2);
+  transition: 300ms ease-in;
 }
-/* okienko modal ma byc dzieckiem backdrop */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 .modal {
   position: absolute;
   width: 528px;
   height: 581px;
-  left: 536px;
-  top: 221px;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
   background-color: #ffffff;
-}
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: ;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%) translateY(-50%);
 }
 .close-btn {
   position: absolute;
@@ -561,6 +564,19 @@ img {
   background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
-.close {
-  fill: #757575;
+.form {
+  fill: #0e0a0a;
+  justify-content: center;
+  display: inline-block;
+  top: 8;
+  left: 8;
+  height: 11px;
+  width: 11px;
+}
+
+.close-btn:hover .form {
+  fill: #2196f3;
+}
+.close-btn:hover {
+  box-shadow: 0px 0px 4px 0px rgba(154, 154, 166, 0.41);
 }
